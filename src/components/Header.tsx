@@ -7,12 +7,11 @@ import EmailIcon from '@mui/icons-material/Email';
 const Header = () => {
   return (
     <Container>
-      <Typography variant="h6" fontSize={18} fontWeight={'bold'}>
+      <Typography variant="h2" fontSize={18} fontWeight={600}>
         경험을 설계하는 개발자 김동균
       </Typography>
 
       <Box display="flex" flexDirection="column" gap="8px">
-        {/* 각 아이콘 + 텍스트 묶기 */}
         <Item>
           <GitHubIcon fontSize="small" />
           <Link
@@ -57,7 +56,6 @@ const Header = () => {
 
 export default Header;
 
-// 스타일
 const Container = styled.header`
   display: flex;
   justify-content: space-between;
