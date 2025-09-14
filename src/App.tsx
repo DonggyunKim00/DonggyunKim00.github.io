@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header';
+import Intro from './components/Intro';
+import { Box, Container } from '@mui/material';
+import About from './components/About';
+import { Children } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  return (
+    <Container
+      maxWidth="md"
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        borderLeft: '1px solid #e8e8e8',
+        borderRight: '1px solid #e8e8e8',
+        minHeight: '100vh',
+        padding: '0px',
+      }}
+    >
+      <Header />
+      <Main>
+        <Intro />
+        <About />
+      </Main>
+    </Container>
+  );
+};
+
+export default App;
+
+const Main = ({ children }: { children: React.ReactNode }) => {
+  const childArray = Children.toArray(children);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    <Box display="flex" flexDirection="column">
+      {childArray.map((child, index) => (
+        <Box key={index} borderTop={index !== 0 ? '1px solid #e8e8e8' : 'none'}>
+          {child}
+        </Box>
+      ))}
+    </Box>
+  );
+};
