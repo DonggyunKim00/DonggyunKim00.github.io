@@ -62,7 +62,6 @@ const Container = styled.section`
   flex-direction: column;
   gap: 32px;
   padding: 32px 16px;
-  border-top: 1px solid #e8e8e8;
 `;
 
 const CategorySection = styled.div`

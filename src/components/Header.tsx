@@ -61,6 +61,7 @@ const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 24px 16px;
+  border-bottom: 1px solid #e8e8e8;
 `;
 
 const Item = styled(Box)`

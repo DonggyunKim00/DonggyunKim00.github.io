@@ -24,7 +24,6 @@ const Container = styled.section`
   align-items: center;
   gap: 5px;
   padding: 32px 16px;
-  border-top: 1px solid #e8e8e8;
 `;
 
 const Image = styled.img`
