@@ -5,6 +5,7 @@ import About from './components/About';
 import { Children } from 'react';
 import Project from './components/Project';
 import Skill from './components/Skill';
+import Education from './components/Education';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <About />
         <Project />
         <Skill />
+        <Education />
       </Main>
     </Container>
   );
