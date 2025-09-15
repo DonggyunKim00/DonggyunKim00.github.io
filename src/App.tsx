@@ -4,6 +4,7 @@ import { Box, Container } from '@mui/material';
 import About from './components/About';
 import { Children } from 'react';
 import Project from './components/Project';
+import Skill from './components/Skill';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Intro />
         <About />
         <Project />
+        <Skill />
       </Main>
     </Container>
   );
